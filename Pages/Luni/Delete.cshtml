@@ -1,0 +1,70 @@
+﻿@page
+@model vacanta.Pages.Luni.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Luna</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Luna.Persoane)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luna.Persoane)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Luna.Buget)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luna.Buget)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Luna.Suveniruri)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luna.Suveniruri)
+        </dd>
+        <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Luna.DataPlecare)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luna.DataPlecare)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Luna.Continent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luna.Continent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Luna.Tara)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luna.Tara)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Luna.Oras)
+    </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luna.Oras)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Luna.Vizitat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luna.Vizitat)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Luna.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

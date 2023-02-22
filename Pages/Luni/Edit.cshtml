@@ -1,0 +1,74 @@
+﻿@page
+@model vacanta.Pages.Luni.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Luna</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Luna.ID" />
+            <div class="form-group">
+                <label asp-for="Luna.Persoane" class="control-label"></label>
+                <input asp-for="Luna.Persoane" class="form-control" />
+                <span asp-validation-for="Luna.Persoane" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Luna.Buget" class="control-label"></label>
+                <input asp-for="Luna.Buget" class="form-control" />
+                <span asp-validation-for="Luna.Buget" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Luna.Suveniruri" class="control-label"></label>
+                <input asp-for="Luna.Suveniruri" class="form-control" />
+                <span asp-validation-for="Luna.Suveniruri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Luna.DataPlecare" class="control-label"></label>
+                <input asp-for="Luna.DataPlecare" class="form-control" />
+                <span asp-validation-for="Luna.DataPlecare" class="textdanger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Luna.ContinentID" class="control-label">Denumire Continent</label>
+                <select asp-for="Luna.ContinentID" class="form-control" asp-items="ViewBag.ContinentID">
+                </select>
+                <span asp-validation-for="Luna.ContinentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Luna.TaraID" class="control-label">Tara Dorita</label>
+                <select asp-for="Luna.TaraID" class="form-control" asp-items="ViewBag.TaraID">
+                </select>
+                <span asp-validation-for="Luna.TaraID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Luna.OrasID" class="control-label">Nume Oras</label>
+                <select asp-for="Luna.OrasID" class="form-control" asp-items="ViewBag.OrasID">
+                </select>
+                <span asp-validation-for="Luna.OrasID" class="text-danger"></span>
+</div>
+<div class="form-group">
+                <label asp-for="Luna.VizitatID" class="control-label">Am Vizitat</label>
+                <select asp-for="Luna.VizitatID" class="form-control" asp-items="ViewBag.VizitatID">
+                </select>
+                <span asp-validation-for="Luna.VizitatID" class="text-danger"></span>
+</div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
